@@ -1,11 +1,7 @@
 :root {
   --gray-100: #f5f5f5;
-  --gray-200: #e5e5e5;
   --gray-300: #d4d4d4;
   --gray-400: #a3a3a3;
-  --gray-500: #737373;
-  --gray-600: #525252;
-  --gray-700: #404040;
   --gray-800: #333;
   --sm: 12px;
   --md: 16px;
@@ -24,6 +20,10 @@ body {
   justify-content: center;
   background-color: var(--gray-100);
   min-height: 92vh;
+}
+
+p {
+  margin: 0;
 }
 
 ul {
@@ -74,9 +74,25 @@ ul {
   transition: all 0.3s ease;
   user-select: none;
   font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .todo__listItem:hover {
   background-color: var(--gray-100);
+}
+
+.todo__listItemText {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.todo__listItemText--done {
+  text-decoration: line-through;
+  color: var(--gray-400);
+}
+
+.todo__listItem svg {
+  flex-shrink: 0;
 }
 
 .todo__amount {
@@ -97,10 +113,10 @@ ul {
   transition: all 0.3s ease;
   font-size: var(--md);
 }
-.todo__filter-btn:hover {
+.todo__btn:hover {
   color: var(--gray-800);
 }
-.todo__filter-btn.active {
+.todo__btn.active {
   color: var(--gray-800);
 }
 
@@ -109,10 +125,4 @@ ul {
   font-weight: bold;
 }
 
-.todo__listItemText {
-  text-overflow: ellipsis;
-}
-.todo__listItemText--done {
-  text-decoration: line-through;
-  color: var(--gray-400);
-}
+
