@@ -120,9 +120,12 @@ ul {
   color: var(--gray-800);
 }
 
+.todo__filter {
+  flex-grow: 1;
+  text-align: center;
+}
+
 .todo__filter-btn--active {
   color: var(--gray-800);
   font-weight: bold;
 }
-
-

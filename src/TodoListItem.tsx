@@ -17,9 +17,7 @@ const TodoListItem = ({
   return (
     <li className="todo__listItem" onClick={handleClick}>
       {item.isDone ? <CircleCheckIcon /> : <CircleIcon />}
-      <p className={`todo__listItemText ${item.isDone ? "todo__listItemText--done" : ""}`}>
-        {item.text}
-      </p>
+      <p className={`todo__listItemText ${item.isDone ? "todo__listItemText--done" : ""}`}>{item.text}</p>
     </li>
   );
 };
